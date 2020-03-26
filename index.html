@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<title> Neil Shah: DATA 608 Module 5 </title>
+<script type="text/javascript">
+
+//Reverses string 
+	function Reverse(reversed) {
+		return (reversed.split("").reverse().join(""));
+}	
+//This is for the button to reverse string 
+	function DisplayReverse(){
+		var temp = document.getElementById("ReverseOutput");
+		temp.innerHTML = (Reverse(document.getElementById('InputString').value));
+}
+//This is to generate the table code---I just added <table> <tr> manually
+    function matrix(n){
+		row=""
+        for (var i = 1; i < 6; i++){
+         
+            var elem1 = n * (4*i - 3);
+            var elem2 = n * (4*i - 2);
+            var elem3 = n * (4*i - 1);
+            var elem4 = n * (4*i - 0);
+
+            rows =    
+            '<tr>' + '<td>' + elem1 + '</td>' +'<td>' + elem2 + '</td>' +  '<td>' + elem3 + '</td>' + '<td>' + elem4 + '</td>' + '</tr>'; 
+			row=row+rows
+        }
+        table= "<table>" +row + "</table>"
+    return table; 
+    }
+	
+	
+//This is for the number matrix button
+	function DisplayTable(){
+        var temp2 = document.getElementById("TableOutput");
+        temp2.innerHTML = matrix(document.getElementById('InputNumber').value);
+    }
+
+</script>
+
+<body>
+<center>
+<h3>Part 1: Reverse a string </h3>
+    <input type="text" placeholder="Type in a string!" id="InputString" name="InputString">
+    <button type="button" onclick="DisplayReverse();">Reverse it!</button>
+	<div id="ReverseOutput"></div>
+
+<h3>Part 2: Number Multiplication Table </h3>
+	<input type="number" placeholder="Type in a number!" id="InputNumber">
+	<button type="button" onclick="DisplayTable();">Generate Table</button>
+	<br>
+		
+	<div id="TableOutput"></div>
+</center>
+
+</body>
+</html>
