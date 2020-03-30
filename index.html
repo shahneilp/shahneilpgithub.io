@@ -39,7 +39,6 @@
     }
 
 </script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
 <body>
 <center>
 	<h1>Neil Shah: DATA 608 Module 5</h1>
@@ -56,14 +55,14 @@
 	<div id="TableOutput"></div>
 </center>
 <center>
+<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+<script src="https://d3js.org/d3-fetch.v1.min.js"></script>
 <script>
-d3.csv("https://raw.githubusercontent.com/charleyferrari/CUNY_DATA_608/master/module5/data/presidents.csv", function(data) {
-    for (var i = 0; i < data.length; i++) {
-        console.log(data[i].Name);
-        console.log(data[i].Height);
-	console.log(data[i].Weight);
-    }
+
+d3.csv("https://raw.githubusercontent.com/charleyferrari/CUNY_DATA_608/master/module5/data/presidents.csv").then(function(data) {
+  console.log(data); // [{"Hello": "world"}, …]
 });
+
 </script>
 	
 </body>
