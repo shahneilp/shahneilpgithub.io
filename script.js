@@ -28,7 +28,7 @@ var tabulate = function (data,columns) {
   return table;
 }
 
-d3.csv('data.csv',function (data) {
+d3.csv('https://raw.githubusercontent.com/charleyferrari/CUNY_DATA_608/master/module5/data/presidents.csv',function (data) {
 	var columns = ['Name','Height','Weight']
   tabulate(data,columns)
 })
