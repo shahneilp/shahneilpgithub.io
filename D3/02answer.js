@@ -19,7 +19,7 @@ d3.csv('ue_industry.csv', data => {
         .range([20, 1180]);
     
     const yScale = d3.scaleLinear()
-        .domain([-totalYmax, totalYmax])
+        .domain([2, totalYmax])
         .range([580, 20]);
 
     const fillScale = d3.scaleOrdinal()
