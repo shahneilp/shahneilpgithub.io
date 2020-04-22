@@ -402,6 +402,10 @@
 
 	<h3>  Solution 2 </h3>
 	
+	<div id="answer2div">
+    <svg id="answer2" style="width:1200px;height:600px;"></svg>
+    </div>
+    <script type="text/javascript" src="02answer.js"></script>
 	<p> Looking at the code it seems that the Y domain, .domain([0, totalYmax]), is cutting off. I changed the 0 to '-totalYmax' <p>
 	
 	    <pre>
@@ -454,10 +458,6 @@
         }); 
       </code>
     </pre>
-	<div id="answer2div">
-      <svg id="answer2" style="width:1200px;height:600px;"></svg>
-    </div>
-    <script type="text/javascript" src="02answer.js"></script>
   </body>
 </html>
 
