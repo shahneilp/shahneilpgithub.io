@@ -41,7 +41,7 @@ d3.csv('ue_industry.csv', data => {
         .data(stackLayout(data))
         .enter().append('path')
         .attr('d', d => stackArea(d))
-        .attr('class', d => 'path7')
+        .attr('class', d => 'answer2')
         .style('fill', d => fillScale(d.key));
 
 });
