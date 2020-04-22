@@ -36,7 +36,7 @@ d3.csv('ue_industry.csv', data => {
         .y1(d => yScale(d[1]))
         .curve(d3.curveBasis);
 
-    d3.select('#part7')
+    d3.select('#answer2')
         .selectAll('path')
         .data(stackLayout(data))
         .enter().append('path')
